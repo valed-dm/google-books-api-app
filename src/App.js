@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { /*Suspense*/ } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Books from "../src/components/Books";
+import BookDescription from "../src/components/Book";
+import SearchForBooks from "../src/components/SearchForBooks";
+//const Books = React.lazy(() => import("../src/components/Books"));
+//const BookDescription = React.lazy(() => import("../src/components/Book"));
 
-function App() {
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/*<Suspense fallback={<div>Loading ...</div>}>*/}
+        <SearchForBooks key={1} />
+        <Router>
+          <Routes>
+            <Route path="/book/:id/" element={[<BookDescription key={3} />]} />
+            <Route path="/" element={[<Books key={2} />]} />
+          </Routes>
+        </Router>
+      {/*</Suspense>*/}
     </div>
   );
 }

@@ -1,38 +1,238 @@
-.App {
+article {
+  font-style: italic;
+  padding: 15px;
+  text-align: justify;
+  text-indent: 10px;
+}
+body {
+  background: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 50px,
+      rgba(128, 128, 128, 0.25) 50px,
+      rgba(128, 128, 128, 0.25) 56px,
+      transparent 56px,
+      transparent 63px,
+      rgba(128, 128, 128, 0.25) 63px,
+      rgba(128, 128, 128, 0.25) 69px,
+      transparent 69px,
+      transparent 116px,
+      rgba(119, 136, 153, 0.25) 116px,
+      rgba(119, 136, 153, 0.25) 166px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 50px,
+      rgba(128, 128, 128, 0.25) 50px,
+      rgba(128, 128, 128, 0.25) 56px,
+      transparent 56px,
+      transparent 63px,
+      rgba(128, 128, 128, 0.25) 63px,
+      rgba(128, 128, 128, 0.25) 69px,
+      transparent 69px,
+      transparent 116px,
+      rgba(119, 136, 153, 0.25) 116px,
+      rgba(119, 136, 153, 0.25) 166px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 5px,
+      rgba(112, 128, 144, 0.25) 5px,
+      rgba(112, 128, 144, 0.25) 10px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 5px,
+      rgba(112, 128, 144, 0.25) 5px,
+      rgba(112, 128, 144, 0.25) 10px
+    );
+
+  background: repeating-linear-gradient(
+      90deg,
+      transparent 0 50px,
+      rgba(128, 128, 128, 0.25) 50px 56px,
+      transparent 56px 63px,
+      rgba(128, 128, 128, 0.25) 63px 69px,
+      transparent 69px 116px,
+      rgba(119, 136, 153, 0.25) 116px 166px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 50px,
+      rgba(128, 128, 128, 0.25) 50px 56px,
+      transparent 56px 63px,
+      rgba(128, 128, 128, 0.25) 63px 69px,
+      transparent 69px 116px,
+      rgba(119, 136, 153, 0.25) 116px 166px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent 0 5px,
+      rgba(112, 128, 144, 0.25) 5px 10px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      transparent 0 5px,
+      rgba(112, 128, 144, 0.25) 5px 10px
+    );
+  font-family: "Montserrat", sans-serif;
+  min-width: 200px;
+}
+button {
+  background-color: rgba(248, 248, 255, 0.8);
+  border: none;
+  border-radius: 3px;
+  color: Black;
+}
+button:hover {
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+h1 {
+  font-size: 1.3em;
+}
+h2 {
+  font-size: 1.1em;
+  margin: 10px 0px 5px 0px;
+}
+h3 {
+  font-size: 0.9em;
+}
+input {
+  background-color: rgba(248, 248, 255, 0.8) !important;
+  border: none;
+  border-radius: 3px;
+  -webkit-border-radius: 3px; /*закругление углов (Google Chrome)*/
+  -moz-border-radius: 3px; /*закругление углов (FireFox)*/
+  -khtml-border-radius: 3px; /*закругление углов (Safari)*/
+  width: 200px;
+}
+input[type="text"]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+input[type="text"]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+p {
+  font-size: 0.8em;
+  margin: 5px 5px 0px 5px;
   text-align: center;
+  text-indent: 10px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+select {
+  background-color: rgba(248, 248, 255, 0.8);
+  border: none;
+  border-radius: 3px;
+  width: 140px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.column {
   align-items: center;
+  background-color: rgba(248, 248, 255, 0.8);
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px gray;
+  color: LightSlateGray;
+  display: flex;
+  flex: 0 0 12%;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 5px;
+  min-height: auto;
+  padding-bottom: 10px;
+  width: 180px;
+}
+.container {
+  max-width: 1920px;
+  min-width: 200px;
+  margin-top: 15vh;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.fas.fa-search {
+  color: LightSlateGray;
+}
+.fas.fa-search:hover {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.header {
+  align-items: center;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-size: 1em;
+  justify-content: center;
+  min-height: 5vh;
+  margin: 0px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.imgClickable:hover {
+  cursor: pointer;
+}
+.info {
+  color: LightSlateGray;
+  font-size: 0.75em;
+  font-style: oblique;
+  font-weight: 700;
+  margin: 5px;
+  text-align: left;
+  text-indent: 0px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px;
+  max-width: 1900px;
+  min-width: 200px;
+}
+[type="search"] {
+  border: none;
+  outline: none;
+}
+@media (max-width: 1700px) {
+  .column {
+    flex: 0 0 13%;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media (max-width: 1500px) {
+  .column {
+    flex: 0 0 15%;
+  }
+}
+@media (max-width: 1200px) {
+  .column {
+    flex: 0 0 20%;
+  }
+}
+@media (max-width: 750px) {
+  .column {
+    flex: 0 0 calc(35% + 10px);
+  }
+}
+@media (max-width: 450px) {
+  .column {
+    flex: 0 0 calc(45% + 20px);
+    margin: 0 auto;
+  }
+}
+@media (max-width: 220px) {
+  .column {
+    flex: 0 0 calc(95% - 30px);
+    margin: auto;
   }
 }

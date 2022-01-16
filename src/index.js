@@ -1,14 +1,34 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import configureStore from "../src/store/configureStore";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+
+const initialState = {
+  category: "all",
+  detailsRequested: false,
+  items: [],
+  itemsExtended: [],
+  itemsHasErrored: false,
+  itemsIsLoading: false,
+  itemsTotal: 0,
+  input: "",
+  newSearch: false,
+  pagination: 30,
+  sort: "relevance",
+  userSearchRequest: [],
+};
+
+const store = configureStore(initialState);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
